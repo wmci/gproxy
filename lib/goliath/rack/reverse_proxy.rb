@@ -22,6 +22,7 @@ module Goliath
         end
         headers['HTTP_HOST'] = env['SERVER_NAME']
         headers['X-Forwarded-Host'] = env['HTTP_HOST']
+        headers['REMOTE_USER'] = env['REMOTE_USER']
 
         params = {head: headers}
         params[:body] = env['params'] if [:put, :post, :patch].include? method
