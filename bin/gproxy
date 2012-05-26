@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+server_path = File.expand_path '../../', __FILE__
+$:.unshift server_path
+Dir.chdir server_path
+
+port = ENV['PORT']
+log_file = ENV['LOG_PATH'] || File.join server_path, 'log/gproxy.log'
+environment = ENV['RACK_ENV'] || 'development'
+
+['-e', environment, '-l', log_file, '-p', port].each do |opt|
+  ARGV << opt
+end
+
+# TODO: fix this hack - Goliath does a Dir.chdir to the file that started goliath (bin/goliath)
+# and sets the app_path to bin/ thereafter. But, we want our app_path to be the root dir.
+$0 = 'gproxy.rb'
+
+require "gproxy"
