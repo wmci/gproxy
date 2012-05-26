@@ -1,4 +1,5 @@
 GEM
+  remote: http://gems.wmci.com/
   remote: http://rubygems.org/
   specs:
     addressable (2.2.8)
@@ -38,7 +39,7 @@ GEM
     multi_json (1.3.5)
     rack (1.4.1)
     rack-accept-media-types (0.9)
-    rack-auth-krb (0.0.3)
+    rack-auth-krb (0.0.4)
       gssapi
       rack
       rkerberos
@@ -60,4 +61,4 @@ PLATFORMS
 DEPENDENCIES
   em-http-request
   goliath
-  rack-auth-krb (>= 0.0.3)
+  rack-auth-krb (= 0.0.4)
