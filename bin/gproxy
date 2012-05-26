@@ -5,7 +5,7 @@ $:.unshift server_path
 Dir.chdir server_path
 
 port = ENV['PORT']
-log_file = ENV['LOG_PATH'] || File.join server_path, 'log/gproxy.log'
+log_file = ENV['LOG_PATH'] || File.join(server_path, 'log/gproxy.log')
 environment = ENV['RACK_ENV'] || 'development'
 
 ['-e', environment, '-l', log_file, '-p', port].each do |opt|
