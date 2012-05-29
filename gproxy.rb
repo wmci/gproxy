@@ -1,7 +1,7 @@
 require 'rack/session/cookie'
 require 'goliath'
 require 'goliath/rack/auth/krb/basic_and_nego'
-require './lib/goliath/rack/reverse_proxy'
+require 'goliath/rack/reverse_proxy'
 
 class Gproxy < Goliath::API
   use Rack::Session::Cookie, key: 'gproxy.session'
