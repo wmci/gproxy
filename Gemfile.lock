@@ -2,17 +2,17 @@ GEM
   remote: http://gems.wmci.com/
   remote: http://rubygems.org/
   specs:
-    addressable (2.2.8)
+    addressable (2.3.2)
     async-rack (0.5.1)
       rack (~> 1.1)
     cookiejar (0.3.0)
-    em-http-request (1.0.2)
+    em-http-request (1.0.3)
       addressable (>= 2.2.3)
       cookiejar
       em-socksify
       eventmachine (>= 1.0.0.beta.4)
       http_parser.rb (>= 0.5.3)
-    em-socksify (0.2.0)
+    em-socksify (0.2.1)
       eventmachine (>= 1.0.0.beta.4)
     em-synchrony (1.0.1)
       eventmachine (>= 1.0.0.beta.1)
@@ -29,8 +29,8 @@ GEM
       rack (>= 1.2.2)
       rack-contrib
       rack-respond_to
-    goliath-reverse-proxy (0.1.2)
-      em-http-request
+    goliath-reverse-proxy (0.2.0)
+      em-http-request (~> 1.0.3)
       em-synchrony
       goliath
     gssapi (1.1.1)
@@ -64,5 +64,5 @@ PLATFORMS
 
 DEPENDENCIES
   goliath
-  goliath-reverse-proxy
-  rack-auth-krb (= 0.0.5)
+  goliath-reverse-proxy (>= 0.2.0)
+  rack-auth-krb (>= 0.0.5)
